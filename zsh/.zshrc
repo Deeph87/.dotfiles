@@ -17,3 +17,5 @@ promptinit
 
 # Plugins
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(starship init zsh)"
+
