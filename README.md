@@ -1,16 +1,27 @@
-## Mes dotfiles
-
-### Kitty  
-
-```bash
-git clone git@github.com:Deeph87/dotfiles.git  
-cd dotfiles/kitty
-chmod +x apply.sh
-./apply.sh # Copie les dotfiles kitty dans le dossier de config de kitty par défaut -> ~/.config/kitty
-``` 
+## My dotfiles
 
 ### Vim
 
 ```bash
-ln -s dotfiles/vim/.vimrc ~/.vimrc
+ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 ``` 
+
+### Neovim
+```bash
+ln -s ~/dotfiles/neovim ~/.config/nvim
+```
+
+### Terminal emulator
+
+```bash
+# Install MartianMono Nerd Font: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/MartianMono.zip
+pacman -S ttf-martian-mono-nerd alacritty zsh starship
+eval "$(starship init zsh)"
+ln -s ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+ln -s ~/dotfiles/alacritty/dracula.toml ~/.config/alacritty/dracula.toml
+```
+
+### KDE
+- Keyboard: 
+	- delay: 300ms
+	- speed: 50r/s
