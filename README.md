@@ -16,11 +16,11 @@ ln -s ~/dotfiles/neovim ~/.config/nvim
 # MACOS 
 brew install starship
 https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/MartianMono.zip
-ln -s ~/dotfiles/starship/starship-macos.toml ~/.config/starship/starship.toml
+ln -s ~/dotfiles/starship/starship-macos.toml ~/.config/starship.toml
 
 # ARCHLINUX 
 sudo pacman -S starship ttf-martian-mono-nerd
-ln -s ~/dotfiles/starship/starship-archlinux.toml ~/.config/starship/starship.toml
+ln -s ~/dotfiles/starship/starship-archlinux.toml ~/.config/starship.toml
 
 # both
 eval "$(starship init zsh)"
