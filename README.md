@@ -1,7 +1,6 @@
 ## My dotfiles
 
 ### Vim
-
 ```bash
 ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 ``` 
@@ -11,12 +10,30 @@ ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
 ln -s ~/dotfiles/neovim ~/.config/nvim
 ```
 
-### Terminal emulator
-
+### Starship
 ```bash
-# Install MartianMono Nerd Font: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/MartianMono.zip
-pacman -S ttf-martian-mono-nerd alacritty zsh starship
+# Macos 
+brew install starship
+https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/MartianMono.zip
+
+# Archlinux 
+pacman -S starship ttf-martian-mono-nerd
+
+# both
+ln -s ~/dotfiles/starship/starship.toml ~/.config/starship/starship.toml
 eval "$(starship init zsh)"
+```
+
+### Alacritty
+```bash
+# Macos
+brew install --cask alacritty
+
+# Archlinux
+pacman -S alacritty
+
+# both
+mkdir ~/.config/alacritty
 ln -s ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 ln -s ~/dotfiles/alacritty/dracula.toml ~/.config/alacritty/dracula.toml
 ```
