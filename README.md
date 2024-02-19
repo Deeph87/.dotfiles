@@ -1,41 +1,54 @@
 ## My dotfiles
 
-### Vim
-```bash
-ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
-``` 
-
 ### Neovim
 ```bash
+# MACOS
+brew install neovim
+
+# ARCHLINUX
+sudo pacman -S neovim 
+
 ln -s ~/dotfiles/neovim ~/.config/nvim
 ```
 
 ### Starship
 ```bash
-# Macos 
+# MACOS 
 brew install starship
 https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/MartianMono.zip
+ln -s ~/dotfiles/starship/starship-macos.toml ~/.config/starship/starship.toml
 
-# Archlinux 
-pacman -S starship ttf-martian-mono-nerd
+# ARCHLINUX 
+sudo pacman -S starship ttf-martian-mono-nerd
+ln -s ~/dotfiles/starship/starship-archlinux.toml ~/.config/starship/starship.toml
 
 # both
-ln -s ~/dotfiles/starship/starship.toml ~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 ```
 
 ### Alacritty
 ```bash
-# Macos
+# MACOS
 brew install --cask alacritty
 
-# Archlinux
-pacman -S alacritty
+# ARCHLINUX
+sudo pacman -S alacritty
 
 # both
 mkdir ~/.config/alacritty
 ln -s ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 ln -s ~/dotfiles/alacritty/dracula.toml ~/.config/alacritty/dracula.toml
+```
+
+### Zsh
+```bash
+# MACOS
+brew install zsh-syntax-highlighting
+ln -s ~/dotfiles/zsh/.zshrc-macos ~/.zshrc
+
+# ARCHLINUX
+sudo pacman -s zsh-syntax-highlighting
+ln -s ~/dotfiles/zsh/.zshrc-archlinux ~/.zshrc
 ```
 
 ### KDE

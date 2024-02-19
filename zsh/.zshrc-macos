@@ -1,0 +1,51 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/jhaudry/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# Prompt
+autoload -Uz promptinit
+promptinit
+
+# zsh-syntax-highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# kubectl
+alias k="kubectl"
+alias kdev="export KUBECONFIG=~/.kube/config_DEV_SSO"
+alias kprod="export KUBECONFIG=~/.kube/config_PROD_SSO"
+
+# python
+alias python="python3"
+
+# pnpm
+export PNPM_HOME="/Users/jhaudry/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# yarn
+export PATH="$(yarn global bin):$PATH"
+
+# npm 
+alias npmrc="ln -s $HOME/npm-settings/.npmrc $HOME/.npmrc"
+
+# directory
+alias cdp='cd $HOME/WebstormProjects'
+alias cdh='cd $HOME'
+
+# starship
+eval "$(starship init zsh)"
+

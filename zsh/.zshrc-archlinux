@@ -15,7 +15,7 @@ compinit
 autoload -Uz promptinit
 promptinit
 
-# Plugins
+# zsh-syntax-highlighting
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
 
