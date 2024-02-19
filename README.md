@@ -51,6 +51,11 @@ sudo pacman -s zsh-syntax-highlighting
 ln -s ~/dotfiles/zsh/.zshrc-archlinux ~/.zshrc
 ```
 
+### Tmux
+```bash
+ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+```
+
 ### KDE
 - Keyboard: 
 	- delay: 300ms
