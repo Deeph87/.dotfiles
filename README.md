@@ -58,8 +58,7 @@ ln -s ~/dotfiles/zsh/.zshrc-archlinux ~/.zshrc
 
 ### Tmux
 ```bash
-mkdir -P ~/.config/tmux && \
-ln -s ~/dotfiles/tmux/.tmux.conf ~/.config/tmux/.tmux.conf
+ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ```
 
 ### KDE
