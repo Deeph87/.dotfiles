@@ -9,4 +9,5 @@ blur = true
 
 [font]
 normal = { family = 'MartianMono Nerd Font'}
-size = 13
+size = 14
+
