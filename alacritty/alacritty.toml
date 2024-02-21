@@ -3,11 +3,11 @@ import = ["~/.config/alacritty/dracula.toml"]
 live_config_reload = true
 
 [window]
-startup_mode = 'Maximized'
+startup_mode = "Maximized"
 opacity = 0.95
 blur = true
 
 [font]
-normal = { family = 'MartianMono Nerd Font'}
+normal = { family = "MartianMono Nerd Font"}
 size = 14
 
