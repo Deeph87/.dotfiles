@@ -1,2 +1,6 @@
-neovim/lua/undodir
+tags
+test.sh
+.luarc.json
+nvim
+undodir
 *.swp
