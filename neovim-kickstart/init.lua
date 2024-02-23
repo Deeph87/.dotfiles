@@ -235,8 +235,8 @@ require('lazy').setup({
         theme = 'dracula',
         component_separators = '',
         section_separators = { left = '', right = '' },
-      },
-    },
+      }
+    }
   },
 
   {
