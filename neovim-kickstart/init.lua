@@ -353,6 +353,7 @@ vim.o.errorbells = false
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.smartindent = true
+vim.o.autowrite = true
 
 vim.api.nvim_create_augroup("neotree", {})
   vim.api.nvim_create_autocmd("UiEnter", {
