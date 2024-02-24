@@ -39,13 +39,8 @@ export PATH="$PNPM_HOME:$PATH"
 # yarn
 export PATH="$(yarn global bin):$PATH"
 
-# npm 
-alias npmrc="ln -s $HOME/npm-settings/.npmrc $HOME/.npmrc"
-
-# directory
-alias cdp='cd $HOME/WebstormProjects'
-alias cdh='cd $HOME'
-
-# starship
-eval "$(starship init zsh)"
-
+# shortcuts
+alias @home="cd ~/"
+alias @dotfiles="cd ~/dotfiles/"
+alias @fedexp="cd ~/fedexp/"
+alias @certif="cd ~/certification-transition/"
