@@ -15,7 +15,7 @@ config.send_composed_key_when_left_alt_is_pressed = true
 -- Font
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
 config.font_size = 14
-config.line_height = 1.5
+config.line_height = 1.2
 
 -- and finally, return the configuration to wezterm
 return config
