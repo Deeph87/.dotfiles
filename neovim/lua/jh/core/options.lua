@@ -1,4 +1,5 @@
 vim.o.hlsearch = false
+vim.o.incsearch = true
 
 -- Make line numbers default
 vim.wo.number = true
@@ -39,15 +40,26 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 vim.o.title = true
+
 vim.o.wrap = false
+
 vim.o.scrolloff = 10
 vim.o.sidescrolloff = 10
+
 vim.o.cursorline = true
+
 vim.o.textwidth = 80
 vim.o.colorcolumn = "80"
+
 vim.o.visualbell = true
 vim.o.errorbells = false
+
 vim.o.splitbelow = true
 vim.o.splitright = true
+
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = 4
+
 vim.o.smartindent = true
-vim.o.autowrite = true
