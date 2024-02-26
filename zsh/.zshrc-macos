@@ -39,6 +39,9 @@ export PATH="$PNPM_HOME:$PATH"
 # yarn
 export PATH="$(yarn global bin):$PATH"
 
+# starship
+eval "$(starship init zsh)"
+
 # shortcuts
 alias @home="cd ~/"
 alias @dotfiles="cd ~/dotfiles/"
