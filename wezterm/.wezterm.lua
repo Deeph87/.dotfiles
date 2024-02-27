@@ -9,8 +9,6 @@ end)
 
 local config = wezterm.config_builder()
 
-config.dpi = 144
-
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.95
 config.color_scheme = 'Dracula'
@@ -19,7 +17,7 @@ config.color_scheme = 'Dracula'
 config.send_composed_key_when_left_alt_is_pressed = true
 
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
-config.font_size = 14
+config.font_size = 17
 config.line_height = 1.2
 
 
