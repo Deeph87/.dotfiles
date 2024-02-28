@@ -17,8 +17,8 @@ config.color_scheme = 'Dracula'
 config.send_composed_key_when_left_alt_is_pressed = true
 
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
-config.font_size = 17
-config.line_height = 1.2
+config.font_size = 15
+config.line_height = 1.1
 
 
 -- KEYBINDINGS
@@ -49,7 +49,7 @@ config.keys = {
     },
   },
   {
-    key = 'm',
+    key = 'g',
     mods = 'LEADER',
     action = action.ActivateKeyTable {
       name = 'activate_pane',
