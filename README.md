@@ -27,23 +27,6 @@ ln -s ~/dotfiles/starship/starship-archlinux.toml ~/.config/starship.toml
 eval "$(starship init zsh)"
 ```
 
-### Alacritty
-```bash
-# MACOS
-brew install --cask alacritty
-```
-```bash
-# ARCHLINUX
-sudo pacman -S alacritty
-```
-```bash
-# both
-mkdir ~/.config/alacritty && \
-ln -s ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml &&
-\
-ln -s ~/dotfiles/alacritty/dracula.toml ~/.config/alacritty/dracula.toml
-```
-
 ### Zsh
 ```bash
 # MACOS
@@ -59,6 +42,12 @@ ln -s ~/dotfiles/zsh/.zshrc-archlinux ~/.zshrc
 ### Tmux
 ```bash
 ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
+```
+
+### .env
+```bash
+ln -s $HOME/dotfiles/.env ~$home/.env
+echo "export $(envsubst < .env)" >> .zshrc
 ```
 
 ### KDE

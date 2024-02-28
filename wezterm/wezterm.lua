@@ -11,15 +11,20 @@ local config = wezterm.config_builder()
 
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.95
-config.color_scheme = 'Dracula'
+config.color_scheme = "Dracula (Official)"
+-- config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = false
+config.window_decorations = "RESIZE"
+config.color_scheme_dirs = {'XDG_CONFIG_HOME/wezterm/colors'}
 
 -- Fallback to left option key usual behavior
 config.send_composed_key_when_left_alt_is_pressed = true
 
-config.font = wezterm.font 'JetBrainsMono Nerd Font'
-config.font_size = 15
-config.line_height = 1.1
+config.font = wezterm.font 'Hack Nerd Font'
+config.font_size = 14
+config.line_height = 1.2
 
+config.freetype_load_target = "Normal"
 
 -- KEYBINDINGS
 
