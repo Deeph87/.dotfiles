@@ -1,7 +1,6 @@
 tags
 test.sh
 .luarc.json
-nvim
 undodir
 *.swp
 .DS_Store
