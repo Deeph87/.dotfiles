@@ -1,4 +1,4 @@
-vim.o.hlsearch = true
+vim.o.hlsearch = false
 vim.o.incsearch = true
 
 -- Make line numbers default

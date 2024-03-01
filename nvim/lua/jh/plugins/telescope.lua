@@ -29,8 +29,11 @@ return {
           },
         },
         layout_strategy = 'vertical',
-        winblend = 5
-     }
+        winblend = 5,
+      },
+      pickers = {
+        lsp_references = { fname_width = 0.5 }
+      }
     }
 
     -- Enable telescope fzf native, if installed

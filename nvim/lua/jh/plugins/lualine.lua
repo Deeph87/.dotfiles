@@ -8,7 +8,8 @@ return {
       icons_enabled = true,
       theme = 'dracula',
       component_separators = '',
-      section_separators = { left = '', right = '' },
+      -- section_separators = { left = '', right = '' },
+      section_separators = {}
     },
     sections = {
       lualine_c = {
