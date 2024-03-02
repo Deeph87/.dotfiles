@@ -15,10 +15,4 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
 	{ import = 'jh.plugins' },
-}, {
-	install = {
-		colorscheme = {
-			'dracula'
-		}
-	}
-})
+}, {})
