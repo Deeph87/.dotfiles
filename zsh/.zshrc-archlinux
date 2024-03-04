@@ -31,6 +31,9 @@ eval "$(starship init zsh)"
 # nvm
 source /usr/share/nvm/init-nvm.sh
 
+# nvim
+alias vim="nvim"
+
 # pnpm
 export PNPM_HOME="/home/jeremy/.local/share/pnpm"
 case ":$PATH:" in

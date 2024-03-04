@@ -37,6 +37,9 @@ alias k="kubectl"
 alias kdev="export KUBECONFIG=~/.kube/config_DEV_SSO"
 alias kprod="export KUBECONFIG=~/.kube/config_PROD_SSO"
 
+# nvim
+alias vim="nvim"
+
 # python
 alias python="python3"
 
