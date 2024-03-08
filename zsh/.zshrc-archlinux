@@ -25,7 +25,8 @@ autoload -Uz promptinit
 promptinit
 
 # zsh-syntax-highlighting
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
 
 # nvm
