@@ -237,15 +237,16 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-font RobotoMono Nerd Font Bold 13
+# for_window [class=".*"] border pixel 3
 
-# font "RobotoMono Medium Nerd Font" 13
-
-default_border none
+default_border pixel 3
 smart_borders on
+# client.focused #ffffff
 
 gaps inner 5
 smart_gaps on
+
+# exec border normal
 
 #
 # Status Bar:
@@ -267,4 +268,5 @@ smart_gaps on
 
 bar swaybar_command waybar
 
+include ~/.config/sway/colors
 include /etc/sway/config.d/*
