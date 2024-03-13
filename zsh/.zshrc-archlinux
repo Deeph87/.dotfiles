@@ -14,7 +14,10 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/jeremy/.zshrc'
 
-PATH=$PATH:$HOME/.local/scripts
+# Path
+LOCAL_SCRIPTS_PATH=$HOME/.local/scripts
+LOCAL_BIN_PATH=$HOME/.local/bin
+PATH=$PATH:$LOCAL_SCRIPTS_PATH:$LOCAL_BIN_PATH
 
 autoload -Uz compinit
 compinit
