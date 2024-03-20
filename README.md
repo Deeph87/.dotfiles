@@ -93,7 +93,6 @@ Ly intéressant. A essayer.
 sudo pacman -S \
 hyprland \
 waybar \
-paru \
 git \
 nvim \
 networkmanager \
@@ -103,6 +102,8 @@ btop \
 pacman-contrib \
 fzf \
 discord \
+ripgrep \
+fd
 ```
 
 ### AUR
