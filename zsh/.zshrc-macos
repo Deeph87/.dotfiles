@@ -54,6 +54,9 @@ export PATH="$(yarn global bin):$PATH"
 # starship
 eval "$(starship init zsh)"
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # shortcuts
 alias @home="cd ~/"
 alias @dotfiles="cd ~/dotfiles/"
