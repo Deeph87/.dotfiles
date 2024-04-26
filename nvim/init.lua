@@ -1,5 +1,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.api.nvim_set_option("clipboard", "unnamed")
 
 require("jh.core")
 require("jh.lazy")

@@ -1,0 +1,23 @@
+format = """
+[  ](fg:#eb6f92)\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+\n $character
+"""
+
+right_format = """
+$time
+"""
+
+[nodejs]
+symbol = ""
+style = "bg:#212736"
+format = '[$symbol ($version) ](fg:#31748f)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+format = "[ $time ](fg:#9ccfd8)"
+

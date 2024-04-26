@@ -12,12 +12,11 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/jeremy/.zshrc'
+zstyle :compinstall filename '/home/jhaudry/.zshrc'
 
 # Path
 LOCAL_SCRIPTS_PATH=$HOME/.local/scripts
-LOCAL_BIN_PATH=$HOME/.local/bin
-PATH=$PATH:$LOCAL_SCRIPTS_PATH:$LOCAL_BIN_PATH
+PATH=$PATH:$LOCAL_SCRIPTS_PATH
 
 autoload -Uz compinit
 compinit
@@ -29,7 +28,7 @@ promptinit
 
 # zsh-syntax-highlighting
 # source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 eval "$(starship init zsh)"
 
 # nvm
@@ -37,11 +36,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# nvim
-alias vim="nvim"
+# kubectl
+alias k="kubectl"
+alias kdev="export KUBECONFIG=~/.kube/config_DEV_SSO"
+alias kprod="export KUBECONFIG=~/.kube/config_PROD_SSO"
 
 # pnpm
-export PNPM_HOME="/home/jeremy/.local/share/pnpm"
+export PNPM_HOME="/home/jhaudry/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -49,5 +50,15 @@ esac
 # pnpm end
 
 # shortcuts
-alias @home="cd ~/"
+alias @home="jhaudry"
 alias @dotfiles="cd ~/dotfiles/"
+
+# python
+alias python=python3
+alias ave="source ./.venv/bin/activate"
+
+# utils
+alias kwp="watch -n1 'kubectl get pods | grep'"
+
+# AD
+alias aal="aws-azure-login"

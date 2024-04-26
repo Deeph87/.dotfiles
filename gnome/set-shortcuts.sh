@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in "1:1" "2:2" "3:3" "4:4" "5:5" "6:6" "7:7" "8:8" "9:9" "0:10"
+for i in "1:1" "2:2" "3:3" "4:4"
 do
     switch_to_workspace_shortcut="['<Super>`echo $i | grep -oE "^[^:]+"`']"    
     move_to_workspace_shortcut="['<Super><Shift>`echo $i | grep -oE "^[^:]+"`']"

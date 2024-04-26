@@ -3,4 +3,5 @@ test.sh
 .luarc.json
 undodir
 *.swp
+*.log
 .DS_Store
