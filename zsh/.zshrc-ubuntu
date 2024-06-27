@@ -1,3 +1,4 @@
+source $HOME/dotfiles/zsh/functions
 source $HOME/dotfiles/zsh/env
 source $HOME/dotfiles/zsh/aliasrc
 

@@ -6,6 +6,7 @@ alias @dotfiles="cd ~/dotfiles/"
 alias k="kubectl"
 alias kdev="export KUBECONFIG=~/.kube/config_DEV_SSO"
 alias kprod="export KUBECONFIG=~/.kube/config_PROD_SSO"
+alias kscale=kube_scale_deployment
 
 # python
 alias python=python3
