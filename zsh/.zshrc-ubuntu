@@ -1,9 +1,5 @@
-# .env
-EDITOR=vim
-XDG_CACHE_HOME=$HOME/.cache
-XDG_CONFIG_HOME=$HOME/.config
-XDG_DATA_HOME=$HOME/.local/share
-XDG_STATE_HOME=$HOME/.local/state
+source $HOME/dotfiles/zsh/env
+source $HOME/dotfiles/zsh/aliasrc
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -36,11 +32,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# kubectl
-alias k="kubectl"
-alias kdev="export KUBECONFIG=~/.kube/config_DEV_SSO"
-alias kprod="export KUBECONFIG=~/.kube/config_PROD_SSO"
-
 # pnpm
 export PNPM_HOME="/home/jhaudry/.local/share/pnpm"
 case ":$PATH:" in
@@ -48,17 +39,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# shortcuts
-alias @home="jhaudry"
-alias @dotfiles="cd ~/dotfiles/"
-
-# python
-alias python=python3
-alias ave="source ./.venv/bin/activate"
-
-# utils
-alias kwp="watch -n1 'kubectl get pods | grep'"
-
-# AD
-alias aal="aws-azure-login"

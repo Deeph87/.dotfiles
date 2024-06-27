@@ -1,0 +1,24 @@
+# shortcuts
+alias @home="jhaudry"
+alias @dotfiles="cd ~/dotfiles/"
+
+# kubectl
+alias k="kubectl"
+alias kdev="export KUBECONFIG=~/.kube/config_DEV_SSO"
+alias kprod="export KUBECONFIG=~/.kube/config_PROD_SSO"
+
+# python
+alias python=python3
+alias ave="source ./.venv/bin/activate"
+
+# utils
+alias kwp="watch -n1 'kubectl get pods | grep'"
+alias grep="grep --color"
+alias scalagrep="grep -nri --include='*.scala'"
+alias tsgrep="grep -nri --include='*.ts' --exclude-dir='node_modules|build|dist'"
+
+# AD
+alias aal="aws-azure-login"
+
+# intellij
+alias i="/opt/idea-IC-241.17890.1/bin/idea.sh"
