@@ -1,5 +1,5 @@
 format = """
-[ 󰣇 ](fg:#eb6f92)\
+[  ](fg:#eb6f92)\
 $directory\
 $git_branch\
 $git_status\
@@ -20,3 +20,4 @@ format = '[$symbol ($version) ](fg:#31748f)'
 disabled = false
 time_format = "%R" # Hour:Minute Format
 format = "[ $time ](fg:#9ccfd8)"
+

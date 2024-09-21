@@ -1,3 +1,10 @@
+# .env
+EDITOR=vim
+XDG_CACHE_HOME=$HOME/.cache
+XDG_CONFIG_HOME=$HOME/.config
+XDG_DATA_HOME=$HOME/.local/share
+XDG_STATE_HOME=$HOME/.local/state
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -6,6 +13,8 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/jhaudry/.zshrc'
+
+PATH=$PATH:$HOME/.local/scripts
 
 autoload -Uz compinit
 compinit
@@ -28,6 +37,9 @@ alias k="kubectl"
 alias kdev="export KUBECONFIG=~/.kube/config_DEV_SSO"
 alias kprod="export KUBECONFIG=~/.kube/config_PROD_SSO"
 
+# nvim
+alias vim="nvim"
+
 # python
 alias python="python3"
 
@@ -38,6 +50,12 @@ export PATH="$PNPM_HOME:$PATH"
 
 # yarn
 export PATH="$(yarn global bin):$PATH"
+
+# starship
+eval "$(starship init zsh)"
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 # shortcuts
 alias @home="cd ~/"
