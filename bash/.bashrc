@@ -37,3 +37,5 @@ function browse() {
     fi
     cd "$directory";
 }
+
+eval "$(starship init bash)"
