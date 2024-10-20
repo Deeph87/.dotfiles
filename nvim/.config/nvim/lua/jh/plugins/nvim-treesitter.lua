@@ -7,6 +7,7 @@ return {
   config = function()
     vim.defer_fn(function()
       require('nvim-treesitter.configs').setup {
+        parser_install_dir = "~/.local/share/nvim/lazy/nvim-treesitter/parser",
         ensure_installed={
           'lua',
           'python',
