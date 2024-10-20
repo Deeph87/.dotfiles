@@ -1,2 +1,0 @@
-# code
-alias pcode="cd ${PROJECTS_DIRECTORY}; browse .; code ."

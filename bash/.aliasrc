@@ -1,0 +1,7 @@
+# shortcuts
+alias @home="cd ~"
+alias @dotfiles="cd ~/.dotfiles/"
+alias nixoscfg="sudo nvim /etc/nixos/configuration.nix"
+
+# code
+alias pcode="cd ${PROJECTS_DIRECTORY}; browse .; code ."
