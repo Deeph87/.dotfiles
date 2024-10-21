@@ -89,5 +89,3 @@ function renameGitBranch() {
     git push --set-upstream origin $newBranchName
     git push origin --delete $oldBranchName
 }
-
-echo "toto"
