@@ -28,6 +28,7 @@ mkdir --parents ~/.config/git && touch ~/.config/git/user
 
 if [ $os == "windows" ]
 then
+    echo "set bell-style none" >> ~/.inputrc
     export MSYS="winsymlinks:nativestrict"
 fi
 
