@@ -6,3 +6,17 @@
     df = diff
     co = checkout
     ci = commit
+
+[push]
+	autoSetupRemote = true
+
+[init]
+	defaultBranch = master
+
+[alias]
+	fid = !git flow init -d
+    pushall = !git checkout develop && git push && git checkout master && git push && git push --tags && git checkout develop
+	co = !git checkout
+    lg = log --color --abbrev-commit  --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    lga = log --all --color --abbrev-commit  --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    lgas = log --all --color --abbrev-commit  --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -n 15

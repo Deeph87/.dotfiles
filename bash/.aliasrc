@@ -5,3 +5,12 @@ alias nixoscfg="sudo nvim /etc/nixos/configuration.nix"
 
 # code
 alias pcode="cd ${PROJECTS_DIRECTORY}; browse .; code ."
+
+# kubectl
+alias k="kubectl"
+
+# AD
+alias aal="aws-azure-login"
+
+# AWS
+alias awsnoob="aws --cli-auto-prompt"

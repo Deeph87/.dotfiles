@@ -3,10 +3,10 @@
 echo "Est-ce une installation NixOS ? (y - n)"
 read isNixosInstall
 
-stow bash
-stow git
-stow nvim
-stow starship
+stow bash --target ~
+stow git --target ~
+stow nvim --target ~
+stow starship --target ~
 
 if [ $isNixosInstall == "y" ]
 then

@@ -1,5 +1,6 @@
 # .bashrc
 source ~/.envrc
+source ~/.envrc
 source ~/.aliasrc
 
 # Source global definitions
