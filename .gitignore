@@ -5,3 +5,4 @@ undodir
 *.swp
 *.log
 .DS_Store
+bash/.aliasctxrc
