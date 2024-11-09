@@ -1,11 +1,8 @@
 [include]
     path = ~/.config/git/user
 
-[alias]
-    st = status
-    df = diff
-    co = checkout
-    ci = commit
+[pull]
+	rebase = true
 
 [push]
 	autoSetupRemote = true
@@ -20,3 +17,7 @@
     lg = log --color --abbrev-commit  --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     lga = log --all --color --abbrev-commit  --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     lgas = log --all --color --abbrev-commit  --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -n 15
+    st = status
+    df = diff
+    co = checkout
+    ci = commit
