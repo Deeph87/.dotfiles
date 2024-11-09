@@ -6,3 +6,4 @@ undodir
 *.log
 .DS_Store
 bash/.aliasctxrc
+git/.config/git/user
