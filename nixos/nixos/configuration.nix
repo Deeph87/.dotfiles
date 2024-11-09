@@ -11,16 +11,24 @@
     ];
 
   # Video settings
-  # hardware.opengl = {
-  #   enable = true;
-  #   driSupport = true;
-  #   driSupport32Bit = true;
-  # };
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+    extraPackages = with pkgs; [
+      amdvlk
+    ];
+    extraPackages32 = with pkgs; [
+      driversi686Linux.amdvlk
+    ];
+  };
 
-  # boot.kernelParams = [
-  #   "video=DP-1:2560x1440@60"
-  #   "video=DP-2:2560x1440@60"
-  # ];
+  boot.kernelParams = [
+    "video=DP-1:2560x1440@60"
+    "video=DP-2:2560x1440@60"
+  ];
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -58,7 +66,10 @@
   services.xserver.enable = true;
   
   # Display Link
-  services.xserver.videoDrivers = [ "displaylink" "modesetting" ];
+  services.xserver.videoDrivers = [ 
+    # "displaylink" # doesn't works with linux kernel 6.10+
+    "modesetting"
+  ];
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -139,7 +150,8 @@
     ripgrep
     xclip
     starship
-    displaylink
+    # displaylink # doesn't works with linux kernel 6.10+
+    discord
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
