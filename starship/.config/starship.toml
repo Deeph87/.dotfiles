@@ -40,6 +40,12 @@ Windows = "  "
 Arch = "  "
 NixOS = "  "
 
+# Tools
+
+[kubernetes]
+disabled = false
+detect_files = [ "~/.kube/config" ]
+
 # Languages
 
 [nodejs]
