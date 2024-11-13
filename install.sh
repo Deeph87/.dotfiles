@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Installation pour quel OS ? (windows | nixos)"
+echo "Installation pour quel OS ? (windows | nixos | arch)"
 read os
 
 echo "Installer starship ? (y - n)"
