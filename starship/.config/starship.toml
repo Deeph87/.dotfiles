@@ -9,17 +9,23 @@ $time\
 \n $character
 """
 
-[nodejs]
-symbol = ""
-style = "bg:#212736"
-format = '[$symbol ($version) ](fg:#31748f)'
+palette = "rose-pine"
+
+[palettes.rose-pine]
+overlay = '#26233a'
+love = '#eb6f92'
+gold = '#f6c177'
+rose = '#ebbcba'
+pine = '#31748f'
+foam = '#9ccfd8'
+iris = '#c4a7e7'
 
 [time]
 disabled = false
-format = "[ $time]($style)"
+format = "[$time]($style)"
 time_format = "%T"
 utc_time_offset = "local"
-style = "italic dimmed white"
+style = "italic fg:iris"
 
 [fill]
 symbol = ' '
@@ -33,3 +39,10 @@ disabled = false
 Windows = "  "
 Arch = "  "
 NixOS = "  "
+
+# Languages
+
+[nodejs]
+symbol = ""
+style = "bg:#212736"
+format = '[$symbol ($version) ](fg:#31748f)'
