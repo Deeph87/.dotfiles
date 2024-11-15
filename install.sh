@@ -35,4 +35,14 @@ fi
 stow bash --target ~
 stow git --target ~
 stow nvim --target ~
+
+if [ $OSTYPE == "msys" ]
+then
+    mkdir C:/Users/jhaudry/AppData/Roaming/alacritty
+    stow alacritty --dir alacritty/.config --target C:/Users/jhaudry/AppData/Roaming/alacritty
+else
+    stow alacritty --target ~
+fi
+
+
 stow starship --target ~

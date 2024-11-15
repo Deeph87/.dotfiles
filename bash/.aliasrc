@@ -32,3 +32,8 @@ alias exploit="cd \"${EXPLOIT_DIRECTORY}\"; browse ."
 alias bashrc="subl ~/.bashrc"
 alias f="browse ."
 alias uuid='od -x /dev/urandom | head -1 | awk '\''{OFS="-"; print $2$3,$4,$5,$6,$7$8$9}'\'''
+
+if [ $OSTYPE == "msys" ]
+then
+    alias stow='MSYS="winsymlinks:nativestrict" stow'
+fi

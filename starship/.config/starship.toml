@@ -22,7 +22,7 @@ iris = '#c4a7e7'
 
 [time]
 disabled = false
-format = "[$time]($style)"
+format = "[$time ]($style)"
 time_format = "%T"
 utc_time_offset = "local"
 style = "italic fg:iris"
@@ -36,7 +36,7 @@ style = "blue"
 disabled = false
 
 [os.symbols]
-Windows = "  "
+Windows = " 󰨡 "
 Arch = "  "
 NixOS = "  "
 

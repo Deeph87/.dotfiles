@@ -1,6 +1,14 @@
 [general]
 live_config_reload = true
+working_directory = "C:/Users/jhaudry"
+
+[window]
+startup_mode = "Maximized"
+dynamic_title = false
+
+[terminal]
+shell = {program = "C:/Program Files/Git/bin/bash.exe", args = ["-i", "-l"]}
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "regular" }
-size = 12
+normal = { family = "JetBrainsMono Nerd Font" }
+size = 14
