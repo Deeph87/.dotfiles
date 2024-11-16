@@ -11,12 +11,19 @@ if [ -f ~/.aliasrc ]; then
     source ~/.aliasrc
 fi
 
+if [ -f /usr/share/nvm/init-nvm.sh ]; then
+    source /usr/share/nvm/init-nvm.sh
+fi
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+# fzf
 eval "$(fzf --bash)"
+
+# starship
 eval "$(starship init bash)"
 
 # User specific environment

@@ -1,14 +1,16 @@
 [general]
 live_config_reload = true
-working_directory = "C:/Users/jhaudry"
+# working_directory = "C:/Users/jhaudry"
 
 [window]
 startup_mode = "Maximized"
 dynamic_title = false
+blur = true
+opacity = 0.90
 
 [terminal]
-shell = {program = "C:/Program Files/Git/bin/bash.exe", args = ["-i", "-l"]}
+# shell = {program = "C:/Program Files/Git/bin/bash.exe", args = ["-i", "-l"]}
 
 [font]
 normal = { family = "JetBrainsMono Nerd Font" }
-size = 14
+size = 12

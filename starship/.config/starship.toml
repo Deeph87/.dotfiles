@@ -1,38 +1,70 @@
+# ---- constants ----
+
+# ---- prompt ----
 format = """
 $os\
+$jobs\
+$username\
+$hostname\
 $directory\
 $git_branch\
 $git_status\
 $nodejs\
+$scala\
+$python\
+$battery\
+$cmd_duration\
+$status\
 $fill\
 $time\
-\n $character
+\n\
+$character
 """
 
-palette = "rose-pine"
+add_newline = false
 
-[palettes.rose-pine]
-overlay = '#26233a'
-love = '#eb6f92'
-gold = '#f6c177'
-rose = '#ebbcba'
-pine = '#31748f'
-foam = '#9ccfd8'
-iris = '#c4a7e7'
+#---- theme ----
+
+palette = "ayu"
+
+[palettes.ayu]
+background = '#212733'
+foreground = '#d9d7ce'
+cursor = '#ffcc66'
+selection_background = '#343f4c'
+color0 = '#191e2a'
+color8 = '#686868'
+color1 = '#ed8274'
+color9 = '#f28779'
+color2  = '#a6cc70'
+color10 = '#bae67e'
+color3  = '#fad07b'
+color11 = '#ffd580'
+color4  = '#6dcbfa'
+color12 = '#73d0ff'
+color5  = '#cfbafa'
+color13 = '#d4bfff'
+color6  = '#90e1c6'
+color14 = '#95e6cb'
+color7  = '#c7c7c7'
+color15 = '#ffffff'
+selection_foreground = '#212733'
+
+# ---- Tools ----
 
 [time]
-disabled = false
+style = "italic fg:color3"
 format = "[$time ]($style)"
+disabled = false
 time_format = "%T"
 utc_time_offset = "local"
-style = "italic fg:iris"
 
 [fill]
 symbol = ' '
 
 [os]
 format = "[$symbol]($style)"
-style = "blue"
+style = "color12"
 disabled = false
 
 [os.symbols]
@@ -40,15 +72,61 @@ Windows = " 󰨡 "
 Arch = "  "
 NixOS = "  "
 
-# Tools
+[jobs]
+format = '[$number$symbol]($style) '
+symbol = '✦'
+style = 'bold color11'
+
+[username]
+show_always = true
+format = '[$user@]($style)'
+style_user = 'bold fg:color13'
+style_root = 'bold color9'
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol$hostname]($style) '
+style = 'bold color13'
+
+[directory]
+style = 'bold color14'
 
 [kubernetes]
 disabled = false
 detect_files = [ "~/.kube/config" ]
 
-# Languages
+[battery]
+format = "[$symbol](fg:$style) "
+
+[[battery.display]]
+threshold = 20
+style = "color9"
+
+[cmd_duration]
+show_milliseconds = true
+format = "[$duration]($style) "
+style = "italic color11"
+show_notifications = true
+
+[status]
+disabled = false
+
+# ---- Languages ----
 
 [nodejs]
-symbol = ""
-style = "bg:#212736"
-format = '[$symbol ($version) ](fg:#31748f)'
+style = "fg:color10"
+format = "[$symbol$version]($style) "
+disabled = false
+symbol = "󰎙 "
+
+[scala]
+style = "fg:color9"
+format = "[$symbol$version]($style) "
+disabled = false
+symbol = " "
+
+[python]
+style = "fg:color11"
+format = "[$symbol$version]($style) "
+disabled = false
+symbol = ' '
