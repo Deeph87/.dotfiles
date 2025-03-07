@@ -31,6 +31,9 @@ alias d="cd \"${DESKTOP_DIRECTORY}\"; browse ."
 alias bashrc="subl ~/.bashrc"
 alias f="browse ."
 alias uuid='od -x /dev/urandom | head -1 | awk '\''{OFS="-"; print $2$3,$4,$5,$6,$7$8$9}'\'''
+alias git-tags="python $PROJECTS_DIRECTORY/python-toolbox/git/fetch_tags.py "
+alias git-libs="python $PROJECTS_DIRECTORY/python-toolbox/git/lib_versions.py "
+alias git-libs_usage="python $PROJECTS_DIRECTORY/python-toolbox/git/lib_usage.py "
 
 if [ $OSTYPE == "msys" ]
 then

@@ -32,6 +32,8 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
+export LOG4J_OUTPUT_FORMAT="text"
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
