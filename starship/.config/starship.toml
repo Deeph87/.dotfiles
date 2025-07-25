@@ -73,6 +73,7 @@ disabled = false
 Windows = "  "
 Arch = "  "
 NixOS = "  "
+Fedora = "  "
 
 [jobs]
 format = '[$number$symbol]($style) '
