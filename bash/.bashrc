@@ -98,3 +98,7 @@ function renameGitBranch() {
     git push --set-upstream origin $newBranchName
     git push origin --delete $oldBranchName
 }
+
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)

@@ -8,17 +8,11 @@ $username\
 $hostname\
 $directory\
 $git_branch\
-$git_status\
 $nodejs\
 $scala\
 $python\
-$battery\
 $cmd_duration\
-$status\
-$time\
 $fill\
-$kubernetes\
-$aws\
 \n\
 $character
 """
@@ -54,19 +48,12 @@ selection_foreground = '#212733'
 
 # ---- Tools ----
 
-[time]
-style = "italic fg:color7"
-format = "[ $time ]($style)"
-disabled = false
-time_format = "%R"
-utc_time_offset = "local"
-
 [fill]
 symbol = ' '
 
 [os]
-format = "[](fg:color3)[$symbol]($style)[](fg:color3 bg:color2)"
-style = "fg:color0 bg:color3"
+format = "[$symbol]($style)"
+style = "fg:foreground bg:background"
 disabled = false
 
 [os.symbols]
@@ -76,48 +63,38 @@ NixOS = "  "
 Fedora = "  "
 
 [jobs]
-format = '[$number$symbol]($style) '
+format = '[$number$symbol ]($style)'
 symbol = '✦'
-style = 'bold color11'
+style = 'fg:foreground bg:background'
 
 [username]
 show_always = true
 format = '[$user@]($style)'
-style_user = 'bold fg:color0 bg:color2 italic'
-style_root = 'bold color9 italic'
+style_user = 'fg:foreground bg:background'
+style_root = 'fg:foreground bg:background'
 
 [hostname]
 ssh_only = false
-format = '[$ssh_symbol$hostname]($style)[](fg:color2 bg:color6)'
-style = 'bold fg:color0 bg:color2 italic'
+format = '[$ssh_symbol$hostname ]($style)'
+style = 'fg:foreground bg:background'
 
 [directory]
-format = '[$path]($style)[$read_only]($read_only_style)[](fg:color6)'
-style = 'bold fg:color0 bg:color6'
+format = '[  $path ]($style)[$read_only]($read_only_style)'
+style = 'fg:background bg:color12'
 
-[kubernetes]
-disabled = false
-detect_folders = [ "~/.kube" ]
-
-[battery]
-format = "[$symbol](fg:$style) "
-
-[[battery.display]]
-threshold = 20
-style = "color9"
+[git_branch]
+format = '[ on $symbol$branch(:$remote_branch) ]($style)'
+style = 'fg:background bg:color11'
 
 [cmd_duration]
 show_milliseconds = true
-format = "[󰅒 $duration]($style) "
-style = "italic color11"
+format = "[ 󰅒 $duration]($style) "
+style = "italic fg:background bg:color14"
 
-[status]
-disabled = false
-
-[aws]
-symbol = '  '
-format = '[$symbol($profile )(\($region\) )(\[$duration\] )]($style) '
-style = 'bold color3'
+[character]
+format = '$symbol '
+success_symbol = '[❯](color13)'
+error_symbol = '[❯](color13)'
 
 # ---- Languages ----
 
