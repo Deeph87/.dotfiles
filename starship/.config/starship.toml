@@ -53,7 +53,7 @@ symbol = ' '
 
 [os]
 format = "[$symbol]($style)"
-style = "fg:foreground bg:background"
+style = "fg:color12 bg:background"
 disabled = false
 
 [os.symbols]
@@ -88,7 +88,7 @@ style = 'fg:background bg:color11'
 
 [cmd_duration]
 show_milliseconds = true
-format = "[ 󰅒 $duration]($style) "
+format = "[ 󰅒 $duration ]($style) "
 style = "italic fg:background bg:color14"
 
 [character]
@@ -99,19 +99,20 @@ error_symbol = '[❯](color13)'
 # ---- Languages ----
 
 [nodejs]
-style = "fg:color10"
-format = "[$symbol$version]($style) "
+format = "[ $symbol$version ]($style)"
+style = "fg:background bg:color10"
 disabled = false
 symbol = "󰎙 "
 
 [scala]
-style = "fg:color9"
-format = "[$symbol$version]($style) "
+format = "[ $symbol$version ]($style)"
+style = "fg:background bg:color9"
 disabled = false
+detect_files = ["pom.xml"]
 symbol = " "
 
 [python]
-style = "fg:color11"
-format = "[$symbol$version]($style) "
+format = "[ $symbol$version ]($style)"
+style = "fg:background bg:color7"
 disabled = false
 symbol = ' '
