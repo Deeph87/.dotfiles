@@ -1,7 +1,13 @@
 ## My dotfiles
 
+### Bash
+Add bash personnal configuration
+```bash
+stow bash --target ~
+```
+
 ### Starship
-Terminal prompt customization
+Add terminal prompt customization
 ```bash
 stow starship --target ~
 ```

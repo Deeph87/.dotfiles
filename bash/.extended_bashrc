@@ -1,0 +1,12 @@
+# .bashrc
+if [ -f ~/.envrc ]; then
+    source ~/.envrc
+fi
+
+if [ -f ~/.functionrc ]; then
+    source ~/.functionrc
+fi
+
+if [ -f ~/.aliasrc ]; then
+    source ~/.aliasrc
+fi

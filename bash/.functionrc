@@ -1,0 +1,45 @@
+function gcall {
+  local groupName=$1
+  if [ -z "$groupName" ]
+  then
+    echo "Missing parameter, possible values : exports | storage | certif"
+    return
+  fi
+
+  if [ $groupName = "exports" ]
+  then
+    projectId="106"
+  elif [ $groupName = "storage" ]
+  then
+    projectId="3552"
+  elif [ $groupName = "certif" ]
+  then
+    projectId="633"
+  fi
+
+  for page in {1..5} ;
+  do
+    GITLAB_URL='https://gitlab.prod.aws.intraxiti.com/api/v4/groups/'$projectId'/projects?per_page=100&page='$page'&include_subgroups=true'
+    PRIVATE_TOKEN_HEADER='PRIVATE-TOKEN: '$GITLAB_PRIVATE_TOKEN # Env var to define
+    for repo in $(curl -s --header "$PRIVATE_TOKEN_HEADER" "$GITLAB_URL" | jq -r ".[].ssh_url_to_repo");
+    do
+      git clone $repo;
+    done;
+  done
+}
+
+function browse() {
+    directory=`ls --color=never -ad $1/.* $1/* | fzf`
+    if [ -z "$directory" ]; then
+     directory=$1
+    fi
+    cd "$directory";
+}
+
+function renameGitBranch() {
+    oldBranchName=$1
+    newBranchName=$2
+    git branch --move $oldBranchName $newBranchName
+    git push --set-upstream origin $newBranchName
+    git push origin --delete $oldBranchName
+}
