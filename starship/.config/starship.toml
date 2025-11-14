@@ -93,8 +93,8 @@ style = "italic fg:background bg:color14"
 
 [character]
 format = '$symbol '
-success_symbol = '[❯](color13)'
-error_symbol = '[❯](color13)'
+success_symbol = '[❯](foreground)'
+error_symbol = '[❯](foreground)'
 
 # ---- Languages ----
 
@@ -107,7 +107,7 @@ symbol = "󰎙 "
 [scala]
 format = "[ $symbol$version ]($style)"
 style = "fg:background bg:color9"
-disabled = false
+disabled = true
 detect_files = ["pom.xml"]
 symbol = " "
 
