@@ -1,5 +1,7 @@
 # .bashrc
+eval "$(fzf --bash)"
 eval "$(starship init bash)"
+eval "$(mise activate --shims bash)"
 
 if [ -f ~/.bashrc_env ]; then
     source ~/.bashrc_env
