@@ -38,7 +38,7 @@ alias git-libs_usage="python $PROJECTS_DIRECTORY/python-toolbox/git/lib_usage.py
 alias cmds="cat ~/commands_templates | fzf"
 alias subl="subl -n"
 
-if [ $OSTYPE == "msys" ]
-then
-    alias stow='MSYS="winsymlinks:nativestrict" stow'
-fi
+#if [ $OSTYPE == "msys" ]
+#then
+#    alias stow='MSYS="winsymlinks:nativestrict" stow'
+#fi
