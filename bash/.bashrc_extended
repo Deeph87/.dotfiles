@@ -1,7 +1,13 @@
 # .bashrc
 eval "$(fzf --bash)"
 eval "$(starship init bash)"
-eval "$(mise activate --shims bash)"
+
+if [ $OSTYPE == "msys" ]
+then
+    eval "$(mise activate --shims bash)"
+else 
+    eval "$(mise activate bash)"
+fi
 
 if [ -f ~/.bashrc_env ]; then
     source ~/.bashrc_env
