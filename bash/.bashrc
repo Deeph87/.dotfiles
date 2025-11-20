@@ -13,12 +13,14 @@ if [ -f ~/.bashrc_extended ]; then
     source ~/.bashrc_extended
 fi
 
-# Configuration de l'historique
-HISTFILE=~/.bash_history
-HISTSIZE=1000
-HISTFILESIZE=2000
-HISTCONTROL=ignoredups:erasedups
+if [ $OSTYPE == "msys" ]; then
+    # Configuration de l'historique
+    HISTFILE=~/.bash_history
+    HISTSIZE=1000
+    HISTFILESIZE=2000
+    HISTCONTROL=ignoredups:erasedups
 
-# Sauvegarde l'historique après chaque commande
-shopt -s histappend
-PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+    # Sauvegarde l'historique après chaque commande
+    shopt -s histappend
+    PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+fi
