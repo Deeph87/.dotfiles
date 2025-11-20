@@ -1,9 +1,3 @@
-# shortcuts
-alias @home="cd ~"
-
-# NixOS
-alias nixoscfg="sudo nvim /etc/nixos/configuration.nix"
-
 # kubectl
 alias k="kubectl"
 

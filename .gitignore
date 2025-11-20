@@ -5,5 +5,6 @@ undodir
 *.swp
 *.log
 .DS_Store
-bash/.aliasctxrc
+bash/.bashrc_env_specific
+bash/.bashrc_aliases_specific
 git/.config/git/user
