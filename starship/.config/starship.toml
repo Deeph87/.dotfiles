@@ -8,13 +8,10 @@ $username\
 $hostname\
 $directory\
 $git_branch\
-$nodejs\
-$scala\
-$python\
 $cmd_duration\
 $fill\
 \n\
-$character
+$character\
 """
 
 add_newline = true
@@ -32,19 +29,47 @@ color0 = '#191e2a'
 color8 = '#686868'
 color1 = '#ed8274'
 color9 = '#f28779'
-color2  = '#a6cc70'
+color2 = '#a6cc70'
 color10 = '#bae67e'
-color3  = '#fad07b'
+color3 = '#fad07b'
 color11 = '#ffd580'
-color4  = '#6dcbfa'
+color4 = '#6dcbfa'
 color12 = '#73d0ff'
-color5  = '#cfbafa'
+color5 = '#cfbafa'
 color13 = '#d4bfff'
-color6  = '#90e1c6'
+color6 = '#90e1c6'
 color14 = '#95e6cb'
-color7  = '#c7c7c7'
+color7 = '#c7c7c7'
 color15 = '#ffffff'
 selection_foreground = '#212733'
+
+[palettes.catppuccin_macchiato]
+rosewater = "#f4dbd6"
+flamingo = "#f0c6c6"
+pink = "#f5bde6"
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+peach = "#f5a97f"
+yellow = "#eed49f"
+green = "#a6da95"
+teal = "#8bd5ca"
+sky = "#91d7e3"
+sapphire = "#7dc4e4"
+blue = "#8aadf4"
+lavender = "#b7bdf8"
+text = "#cad3f5"
+subtext1 = "#b8c0e0"
+subtext0 = "#a5adcb"
+overlay2 = "#939ab7"
+overlay1 = "#8087a2"
+overlay0 = "#6e738d"
+surface2 = "#5b6078"
+surface1 = "#494d64"
+surface0 = "#363a4f"
+base = "#24273a"
+mantle = "#1e2030"
+crust = "#181926"
 
 # ---- Tools ----
 
@@ -91,28 +116,31 @@ show_milliseconds = true
 format = "[ 󰅒 $duration ]($style) "
 style = "italic fg:background bg:color14"
 
+[package]
+disabled = true
+
 [character]
-format = '$symbol '
-success_symbol = '[❯](foreground)'
-error_symbol = '[❯](foreground)'
+format = "$symbol "
+success_symbol = '[❯](color10)'
+error_symbol = '[❯](color9)'
 
 # ---- Languages ----
 
-[nodejs]
-format = "[ $symbol$version ]($style)"
-style = "fg:background bg:color10"
-disabled = false
-symbol = "󰎙 "
+# [nodejs]
+# format = "[ $symbol$version ]($style)"
+# style = "fg:background bg:color10"
+# disabled = false
+# symbol = "󰎙 "
 
-[scala]
-format = "[ $symbol$version ]($style)"
-style = "fg:background bg:color9"
-disabled = true
-detect_files = ["pom.xml"]
-symbol = " "
+# [scala]
+# format = "[ $symbol$version ]($style)"
+# style = "fg:background bg:color9"
+# disabled = true
+# detect_files = ["pom.xml"]
+# symbol = " "
 
-[python]
-format = "[ $symbol$version ]($style)"
-style = "fg:background bg:color7"
-disabled = false
-symbol = ' '
+# [python]
+# format = "[ $symbol$version ]($style)"
+# style = "fg:background bg:color7"
+# disabled = false
+# symbol = ' '
