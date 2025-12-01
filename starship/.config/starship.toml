@@ -8,6 +8,7 @@ $username\
 $hostname\
 $directory\
 $git_branch\
+$aws\
 $cmd_duration\
 $fill\
 \n\
@@ -108,8 +109,8 @@ format = '[  $path ]($style)[$read_only]($read_only_style)'
 style = 'fg:background bg:color12'
 
 [git_branch]
-format = '[ on $symbol$branch(:$remote_branch) ]($style)'
-style = 'fg:background bg:color11'
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+style = 'fg:background bg:color5'
 
 [cmd_duration]
 show_milliseconds = true
@@ -123,6 +124,11 @@ disabled = true
 format = "$symbol "
 success_symbol = '[❯](color10)'
 error_symbol = '[❯](color9)'
+
+[aws]
+format = '[$symbol$profile.$region ]($style)'
+symbol = ' 󰆦 '
+style = 'fg:background bg:color3'
 
 # ---- Languages ----
 

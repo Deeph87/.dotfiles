@@ -7,4 +7,5 @@ undodir
 .DS_Store
 bash/.bashrc_env_specific
 bash/.bashrc_aliases_specific
+bash/.bashrc_functions_specific
 git/.config/git/user

@@ -21,6 +21,10 @@ if [ -f ~/.bashrc_functions ]; then
     source ~/.bashrc_functions
 fi
 
+if [ -f ~/.bashrc_functions_specific ]; then
+    source ~/.bashrc_functions_specific
+fi
+
 if [ -f ~/.bashrc_aliases ]; then
     source ~/.bashrc_aliases
 fi
