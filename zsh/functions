@@ -1,3 +1,0 @@
-kube_scale_deployment() {
-	kubectl scale --replicas=$1 deployment $2
-}

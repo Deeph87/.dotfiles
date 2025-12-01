@@ -18,7 +18,6 @@ alias sb="source ~/.bashrc"
 alias p="cd ${PROJECTS_DIRECTORY}; browse ."
 alias pcode="cd ${PROJECTS_DIRECTORY}; browse .; code ."
 alias psubl="cd ${PROJECTS_DIRECTORY}; browse .; subl -n ."
-alias pidea="cd ${PROJECTS_DIRECTORY}; browse .; start idea64.exe ."
 alias d="cd \"${DESKTOP_DIRECTORY}\"; browse ."
 alias bashrc="subl ~/.bashrc"
 alias f="browse ."
@@ -29,7 +28,9 @@ alias git-libs_usage="python $PROJECTS_DIRECTORY/python-toolbox/git/lib_usage.py
 alias cmds="cat ~/commands_templates | fzf"
 alias subl="subl -n"
 
-if [ $OSTYPE == "msys" ]
-then
+if [ $OSTYPE == "msys" ]; then
     alias stow='MSYS="winsymlinks:nativestrict" stow'
+    alias pidea="cd ${PROJECTS_DIRECTORY}; browse .; start idea64.exe ."
+else
+    alias pidea="cd ${PROJECTS_DIRECTORY}; browse .; nohup idea . > /dev/null 2>&1 &"
 fi
