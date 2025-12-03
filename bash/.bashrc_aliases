@@ -16,8 +16,8 @@ alias p="cd ~/projects"
 alias op="ls ~/projects | fzf"
 alias sb="source ~/.bashrc"
 alias p="cd ${PROJECTS_DIRECTORY}; browse ."
-alias pcode="cd ${PROJECTS_DIRECTORY}; browse .; code ."
 alias psubl="cd ${PROJECTS_DIRECTORY}; browse .; subl -n ."
+alias pcode="cd ${PROJECTS_DIRECTORY}; browse .; code ."
 alias d="cd \"${DESKTOP_DIRECTORY}\"; browse ."
 alias bashrc="subl ~/.bashrc"
 alias f="browse ."
@@ -32,5 +32,12 @@ if [ $OSTYPE == "msys" ]; then
     alias stow='MSYS="winsymlinks:nativestrict" stow'
     alias pidea="cd ${PROJECTS_DIRECTORY}; browse .; start idea64.exe ."
 else
-    alias pidea="cd ${PROJECTS_DIRECTORY}; browse .; nohup idea . > /dev/null 2>&1 &"
+    if grep -qi "microsoft\|wsl" /proc/version 2>/dev/null; then
+        # Code spécifique à WSL
+        alias pidea="cd ${PROJECTS_DIRECTORY}; browse .; setsid idea64.exe . > /dev/null 2>&1 &"
+        alias psubl="cd ${PROJECTS_DIRECTORY}; browse .; subl.exe -n ."
+    else
+        # Code pour Linux natif
+        alias pidea="cd ${PROJECTS_DIRECTORY}; browse .; nohup idea . > /dev/null 2>&1 &"
+    fi
 fi
