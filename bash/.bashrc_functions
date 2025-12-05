@@ -43,3 +43,24 @@ function renameGitBranch() {
     git push --set-upstream origin $newBranchName
     git push origin --delete $oldBranchName
 }
+
+pacman_install() {
+    local packages
+    packages=$(pacman -Slq | fzf \
+        --multi \
+        --preview 'pacman -Sii {}' \
+        --preview-window=right:60%:wrap \
+        --header 'Tab: Toggle Preview | Shift+Tab: Select | Enter: Install')
+    
+    if [[ -n "$packages" ]]; then
+        echo -e "\nPackages sélectionnés :"
+        echo "$packages" | tr ' ' '\n' | sed 's/^/  - /'
+        read -p "Confirmer l'installation ? (y/N) " -n 1 -r
+        echo
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+            sudo pacman -S $packages
+        else
+            echo "Installation annulée."
+        fi
+    fi
+}
