@@ -20,6 +20,7 @@
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
 font-family = "JetBrainsMono Nerd Font"
+font-size = 14
 # window-padding-x = 2
 #
 # # Spacing around the equals sign does not matter.
@@ -46,4 +47,13 @@ cursor-style = block
 # cursor-style-blink = false
 shell-integration-features = no-cursor
 
-theme = "Ayu Mirage"
+# theme = catppuccin-mocha.conf
+# theme = catppuccin-macchiato.conf
+# theme = Catppuccin Mocha
+# theme = Catppuccin Latte
+theme = Catppuccin Macchiato
+# theme = Catppuccin Frappe
+
+window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 10
