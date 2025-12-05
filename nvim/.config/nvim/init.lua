@@ -18,9 +18,13 @@ vim.opt.number = true
 
 -- KEYMAPS
 vim.keymap.set('n', '<leader>ge', vim.cmd.Ex)
+
 -- telescope
 vim.keymap.set('n', '<leader>gn', telescope.find_files, {})
 vim.keymap.set('n', '<leader>ls', telescope.buffers, {})
+
+--nvim-treesitter
+require'nvim-treesitter'.install { 'query', 'markdown', 'markdown_inline', 'lua', 'vim', 'vimdoc', 'javascript', 'typescript', 'scala' }
 
 -- vim.pack.add{
 --   { src = 'https://github.com/nvim-lua/plenary.nvim' },
