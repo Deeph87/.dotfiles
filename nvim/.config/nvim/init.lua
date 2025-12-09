@@ -15,13 +15,19 @@ vim.cmd.colorscheme "catppuccin"
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.opt.number = true
+vim.wo.relativenumber = true
+vim.o.cursorline = true
 
 -- KEYMAPS
 vim.keymap.set('n', '<leader>ge', vim.cmd.Ex)
+vim.keymap.set('n', '<leader><Tab>', vim.cmd.bnext, {desc = 'Next buffer'})
+vim.keymap.set('n', '<leader><S-Tab>', vim.cmd.bprev, {desc = 'Previous buffer'})
 
 -- telescope
-vim.keymap.set('n', '<leader>gn', telescope.find_files, {})
-vim.keymap.set('n', '<leader>ls', telescope.buffers, {})
+vim.keymap.set('n', '<leader>ff', telescope.find_files, {})
+vim.keymap.set('n', '<leader>fg', telescope.live_grep, {})
+vim.keymap.set('n', '<leader>fb', telescope.buffers, {})
+-- vim.keymap.set('n', '<leader>db', telescope.delete_buffer, {})
 
 --nvim-treesitter
 require'nvim-treesitter'.install { 'query', 'markdown', 'markdown_inline', 'lua', 'vim', 'vimdoc', 'javascript', 'typescript', 'scala' }
