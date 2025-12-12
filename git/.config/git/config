@@ -1,14 +1,17 @@
 [include]
     path = ~/.config/git/user
 
+[core]
+    editor = "nvim"
+
 [pull]
-	rebase = true
+    rebase = true
 
 [push]
-	autoSetupRemote = true
+    autoSetupRemote = true
 
 [init]
-	defaultBranch = master
+    defaultBranch = master
 
 [alias]
     fid = !git flow init -d
@@ -18,7 +21,9 @@
     lgas = log --all --color --abbrev-commit --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -n 15
     st = status
     df = diff
-    co = !git checkout $(git branch --all | fzf | tr -d '[:space:]')
+    co = !git checkout $(git branch --format='%(refname:short)' | fzf)
+    sync = fetch --all --prune
+    bclean = !git branch -vv | grep 'gone' | awk '{print $1}' | xargs git branch -D
     ci = commit
     cpb = !"git curbr | clip"
     curbr = rev-parse --abbrev-ref HEAD
