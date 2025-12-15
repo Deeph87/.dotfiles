@@ -31,7 +31,7 @@ git clone git@github.com:nvim-lua/plenary.nvim.git ~/.config/nvim/pack/vendor/st
 git clone git@github.com:nvim-telescope/telescope.nvim.git ~/.config/nvim/pack/vendor/start/telescope.nvim && \
 git clone git@github.com:nvim-lualine/lualine.nvim.git ~/.config/nvim/pack/vendor/start/lualine.nvim && \
 git clone git@github.com:catppuccin/nvim.git ~/.config/nvim/pack/vendor/start/catppuccin.nvim && \
-git clone -b main git@github.com:nvim-treesitter/nvim-treesitter.git ~/.config/nvim/pack/vendor/start/nvim-treesitter && \
+git clone git@github.com:nvim-treesitter/nvim-treesitter.git ~/.config/nvim/pack/vendor/start/nvim-treesitter && \
 echo "Installation done"
 ```
 ```shell
