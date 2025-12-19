@@ -1,11 +1,3 @@
--- OPTIONS
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-vim.opt.number = true
-vim.wo.relativenumber = true
-vim.o.cursorline = true
-vim.opt.shiftwidth = 4
-
 -- LOAD PLUGINS
 require("config.lazy")
 local telescope = require('telescope.builtin')
@@ -19,6 +11,8 @@ require('lualine').setup {
 vim.keymap.set('n', '<leader>ge', vim.cmd.Ex)
 vim.keymap.set('n', '<leader><Tab>', vim.cmd.bnext, {desc = 'Next buffer'})
 vim.keymap.set('n', '<leader><S-Tab>', vim.cmd.bprev, {desc = 'Previous buffer'})
+vim.keymap.set('n', '<leader>tn', vim.cmd.tabnew, {desc = 'Open a new tab page'})
+vim.keymap.set('n', '<leader>tc', vim.cmd.tabclose, {desc = 'Close current tab page'})
 
 -- telescope
 vim.keymap.set('n', '<leader>ff', telescope.find_files, {})
