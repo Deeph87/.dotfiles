@@ -113,7 +113,7 @@ style = 'fg:background bg:color5'
 
 [cmd_duration]
 show_milliseconds = true
-format = "[󰅒 $duration ]($style) "
+format = "[ 󰅒 $duration ]($style) "
 style = "italic fg:color14"
 
 [package]
