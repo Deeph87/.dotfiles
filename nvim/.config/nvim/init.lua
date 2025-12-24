@@ -2,10 +2,16 @@
 require("config.lazy")
 local telescope = require('telescope.builtin')
 
+
 -- INIT PLUGINS
-require('lualine').setup {
-    options = { theme  = "catppuccin" }
-}
+-- require('lualine').setup {
+--     options = { 
+-- 	theme  = "catppuccin",
+-- 	sections = {
+-- 	    lualine_a = { { 'filename', path = 2 } }
+-- 	}
+--     }
+-- }
 
 -- KEYMAPS
 vim.keymap.set('n', '<leader>ge', vim.cmd.Ex)
@@ -14,8 +20,12 @@ vim.keymap.set('n', '<leader><S-Tab>', vim.cmd.bprev, {desc = 'Previous buffer'}
 vim.keymap.set('n', '<leader>tn', vim.cmd.tabnew, {desc = 'Open a new tab page'})
 vim.keymap.set('n', '<leader>tc', vim.cmd.tabclose, {desc = 'Close current tab page'})
 
--- telescope
-vim.keymap.set('n', '<leader>ff', telescope.find_files, {})
+vim.keymap.set('n', '<leader>ff', function()
+  telescope.find_files({
+    hidden = true,
+    no_ignore = false
+  })
+end, {desc = 'Telescope find files'})
 vim.keymap.set('n', '<leader>fg', telescope.live_grep, {})
 vim.keymap.set('n', '<leader>fb', telescope.buffers, {})
 -- vim.keymap.set('n', '<leader>db', telescope.delete_buffer, {})
