@@ -24,6 +24,43 @@ require("catppuccin").setup {
 
 vim.cmd.colorscheme "catppuccin"
 
+--nvim-treesitter
+require'nvim-treesitter'.setup {
+  -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+  -- install_dir = vim.fn.stdpath('data') .. '/site'
+  install_dir = vim.fn.stdpath('data') .. '/site',
+  ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "javascript", "typescript", "scala", "python" },
+  sync_install = false,
+  auto_install = true,
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = true
+  }
+}
+-- require'nvim-treesitter'.install { 'query', 'markdown', 'markdown_inline', 'lua', 'vim', 'vimdoc', 'javascript', 'typescript', 'scala' }
+
+-- vim.api.nvim_create_autocmd('FileType', {
+  --pattern = { 'js', 'lua' },
+  --callback = function() vim.treesitter.start() end,
+--})
+
+-- require'nvim-treesitter.configs'.setup {
+--   install_dir = vim.fn.stdpath('data') .. '/site',
+--   ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "javascript", "typescript", "scala" },
+--   sync_install = false,
+--   auto_install = true,
+--   highlight = {
+--     enable = true,
+--     additional_vim_regex_highlighting = false,
+--   },
+-- }
+
+-- vim.pack.add{
+--   { src = 'https://github.com/nvim-lua/plenary.nvim' },
+--   { src = 'https://github.com/nvim-telescope/telescope.nvim' }
+-- }l
+
+
 -- vim.api.nvim_set_option("clipboard", "unnamed")
 
 -- require("jh.core")

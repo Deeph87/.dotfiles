@@ -38,7 +38,7 @@ if [ $OSTYPE == "msys" ]; then
 else
     if grep -qi "microsoft\|wsl" /proc/version 2>/dev/null; then
         # Code spécifique à WSL
-        alias pidea="cd ${PROJECTS_DIRECTORY}; browse .; setsid idea64.exe . > /dev/null 2>&1 &"
+        alias pidea="cd ${PROJECTS_DIRECTORY}; browse .; idea . > /dev/null 2>&1 &"
         alias psubl="cd ${PROJECTS_DIRECTORY}; browse .; subl.exe -n ."
     else
         # Code pour Linux natif
