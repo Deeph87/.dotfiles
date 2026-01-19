@@ -23,8 +23,10 @@ vim.g.maplocalleader = ','
 vim.opt.number = true
 vim.wo.relativenumber = true
 vim.o.cursorline = true
+vim.o.signcolumn = "yes"
 vim.opt.shiftwidth = 4
 vim.opt.scrolloff = 13
+vim.diagnostic.config({ virtual_text = true })
 
 -- Setup lazy.nvim
 require("lazy").setup({

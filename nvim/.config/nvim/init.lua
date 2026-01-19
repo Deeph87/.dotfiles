@@ -37,6 +37,8 @@ require'nvim-treesitter'.setup {
     additional_vim_regex_highlighting = true
   }
 }
+
+vim.lsp.enable({'metals', 'ts_ls', 'lua_ls', 'pylsp'})
 -- require'nvim-treesitter'.install { 'query', 'markdown', 'markdown_inline', 'lua', 'vim', 'vimdoc', 'javascript', 'typescript', 'scala' }
 
 -- vim.api.nvim_create_autocmd('FileType', {
