@@ -1,13 +1,25 @@
 -- LOAD PLUGINS
 require("config.lazy")
 local telescope = require('telescope.builtin')
+local opts = { noremap=true, silent=true }
 
 -- KEYMAPS
 vim.keymap.set('n', '<leader>ge', vim.cmd.Ex)
-vim.keymap.set('n', '<leader><Tab>', vim.cmd.bnext, {desc = 'Next buffer'})
-vim.keymap.set('n', '<leader><S-Tab>', vim.cmd.bprev, {desc = 'Previous buffer'})
-vim.keymap.set('n', '<leader>tn', vim.cmd.tabnew, {desc = 'Open a new tab page'})
-vim.keymap.set('n', '<leader>tc', vim.cmd.tabclose, {desc = 'Close current tab page'})
+vim.keymap.set('n', '<leader><Tab>', vim.cmd.bnext, vim.tbl_extend("force", opts, { desc = 'Next buffer' }))
+vim.keymap.set('n', '<leader><S-Tab>', vim.cmd.bprev, vim.tbl_extend("force", opts, { desc = 'Previous buffer' }))
+vim.keymap.set('n', '<leader>tn', vim.cmd.tabnew, vim.tbl_extend("force", opts, {desc = 'Open a new tab page'}))
+vim.keymap.set('n', '<leader>tc', vim.cmd.tabclose, vim.tbl_extend("force", opts, {desc = 'Close current tab page'}))
+
+-- Navigation
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, vim.tbl_extend("force", opts, {desc = 'Type basique'}))
+vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, vim.tbl_extend("force", opts, {desc = 'Signature'}))
+vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, vim.tbl_extend("force", opts, {desc = 'Définition type'}))
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, vim.tbl_extend("force", opts, {desc = 'Définition var'}))
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, vim.tbl_extend("force", opts, {desc = 'Implémentation'}))
+vim.keymap.set('n', 'gr', telescope.lsp_references, vim.tbl_extend("force", opts, {desc = 'Références'}))
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = "rounded", -- Rend la bordure de la popup arrondie
+})
 
 vim.keymap.set('n', '<leader>ff', function()
   telescope.find_files({
@@ -18,6 +30,7 @@ end, {desc = 'Telescope find files'})
 vim.keymap.set('n', '<leader>fg', telescope.live_grep, {})
 vim.keymap.set('n', '<leader>fb', telescope.buffers, {})
 -- vim.keymap.set('n', '<leader>db', telescope.delete_buffer, {})
+vim.keymap.set('n', '<leader>fk', telescope.keymaps, { desc = 'Find keymaps' })
 require("catppuccin").setup {
     flavour = "macchiato"
 }
