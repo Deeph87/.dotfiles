@@ -1,0 +1,30 @@
+{
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "vim_mode": true,
+  "base_keymap": "JetBrains",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Catppuccin Macchiato - No Italics",
+  },
+  "languages": {
+    "Python": {
+      "language_servers": [
+        // Disable basedpyright and enable ty, and otherwise
+        // use the default configuration.
+        "ty",
+        "!basedpyright",
+      ],
+    },
+  },
+}
