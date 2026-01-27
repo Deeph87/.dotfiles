@@ -5,6 +5,7 @@ undodir
 *.swp
 *.log
 .DS_Store
+bash/.bashrc_env
 bash/.bashrc_env_specific
 bash/.bashrc_aliases_specific
 bash/.bashrc_functions_specific
