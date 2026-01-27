@@ -1,40 +1,61 @@
 ## My dotfiles
 
-### Bash
+### Install GNU stow
+Windows (git bash) :   
+Download a binary runable with *git bash* on the official GNU stow FTP : https://ftp.gnu.org/gnu/stow/
 > [!WARNING]
->  For Windows open a terminal in admin mode and excute the following command before stowing
+>  For Windows open a terminal in admin mode and excute the following command before stowing or add directly this alias in your ~/.bashrc file
 >  ```bash
 >  alias stow='MSYS="winsymlinks:nativestrict" stow'
->  ```
+>  ```  
+
+ArchLinux : 
+```bash
+sudo pacman -Syu stow
+```
+
+### bash
 Add bash personnal configuration
 ```bash
 stow --dir ~/.dotfiles --target ~ bash
 ```
 
-### Starship
+### git
+Add git config
+```bash
+stow --dir ~/.dotfiles --target ~ git
+```
+
+### starship
 Add terminal prompt customization
 ```bash
 stow --dir ~/.dotfiles --target ~ starship
 ```
 
 ### ghostty
-Add terminal prompt customization
+Add ghostty configuration
 ```bash
-sdsd
+stow --dir ~/.dotfiles --target ~ ghostty
 ```
 
 ### nvim
 Add nvim config
 ```bash
 stow --dir ~/.dotfiles --target ~ nvim
-git clone git@github.com:nvim-lua/plenary.nvim.git ~/.config/nvim/pack/vendor/start/plenary.nvim && \
-git clone git@github.com:nvim-telescope/telescope.nvim.git ~/.config/nvim/pack/vendor/start/telescope.nvim && \
-git clone git@github.com:nvim-lualine/lualine.nvim.git ~/.config/nvim/pack/vendor/start/lualine.nvim && \
-git clone git@github.com:catppuccin/nvim.git ~/.config/nvim/pack/vendor/start/catppuccin.nvim && \
-git clone git@github.com:nvim-treesitter/nvim-treesitter.git ~/.config/nvim/pack/vendor/start/nvim-treesitter && \
-echo "Installation done"
 ```
-```shell
-# In nvim, load all tags
-:helptags ALL
+
+### tmux
+Add tmux config
+```bash
+stow --dir ~/.dotfiles --target ~ tmux
+```
+### zed
+Add zed config
+```bash
+stow --dir ~/.dotfiles --target ~ zed
+```
+
+### Install script
+```bash
+./install.sh
 ```
